@@ -1,0 +1,153 @@
+.navbar {
+  display: flex;                    /* Use flexbox for layout */
+  justify-content: space-between;   /* Space between logo and icons */
+  align-items: center;              /* Center items vertically */
+  background-color: #f9f9f9;          /* White background for navbar */
+  height: 17%;   
+  padding: 0 20px;                  /* Remove vertical padding, keep horizontal padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */                /* Fixed positioning at the top */
+  top: 0;                           /* Align to the top of the page */
+  left: 0;                          /* Align to the left edge of the page */
+  right: 0; 
+  max-width: 100%;                        
+
+
+  .navbar-logo img {
+    height: 50px;                    
+    width: auto;  
+    object-fit: contain;  
+  }
+
+  .vertical-hr {
+  
+    height: auto;
+    border-left: thin solid #4f4e4e;
+    width: 1;
+    
+  }
+}
+
+
+
+.navbar-icons {
+  display: flex; 
+  flex-direction: row-reverse;
+  width:30%;
+  
+    
+  .icon {
+    color: #040404;  
+    size: 3;                /* Dark icon color */
+    font-size: clamp(1.25rem, 0.4487179487179487rem + 3.418803418803419vw, 2.5rem);              /* Adjust icon size to fit */
+    margin-left: 5%; 
+    margin-right: 5%;             /* Space between icons */
+    cursor: pointer;                 /* Change cursor on hover */
+    background-color: #bcbaba;
+    background-size: 500%; 
+    border-radius: 100%;
+    padding:0.5rem;
+    
+  }
+
+}
+            
+
+.icon:hover {
+  color:rgb(105, 201, 188);             /* Change color on hover */
+}
+
+.main-content {
+  margin-top: 60px;               /* Adjust this value based on your navbar height */
+}
+
+
+
+
+.user-name{
+  border:none;
+  font-size: larger;
+  background-color: #f9f9f9;
+}
+
+
+@media (max-width: 375px) {
+  .navbar {
+    height: 10%;                      /* Adjust height for mobile */
+    padding: 0 10px;  
+    height:15%;                /* Reduce horizontal padding */
+  }
+
+  .navbar .navbar-logo img {
+    height: auto;                     /* Smaller logo for mobile */
+    width: 4px;
+    max-width: 100%;
+    min-width:100px;
+    object-fit: contain;
+  }
+
+  .navbar-icons {
+    width: 50%;                       /* Shrink icon container */
+  }
+
+  .navbar-icons .icon {
+    font-size: 1.5rem;                /* Adjust icon size */
+    margin: 0 5px;                    /* Decrease margin between icons */
+  }
+
+  .vertical-hr {
+    height: 30px;                     /* Adjust separator height */
+    border-left: 1px solid #4f4e4e;
+  }
+
+  .main-content {
+    margin-top: 50px;                 /* Adjust for smaller navbar height */
+  }
+
+  .user-name {
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.4536082474226804rem + 1.2886597938144329vw, 2rem);          /* Adjust font size for smaller view */
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 10%;                      /* Adjust height for mobile */
+    padding: 0 10px;  
+    height:15%;                /* Reduce horizontal padding */
+  }
+
+  .navbar .navbar-logo img {
+    height: auto;                     /* Smaller logo for mobile */
+    width: 4px;
+    max-width: 100%;
+    min-width:100px;
+    object-fit: contain;
+  }
+
+  .navbar-icons {
+    width: 50%;                       /* Shrink icon container */
+  }
+
+  .navbar-icons .icon {
+    font-size: 1.5rem;                /* Adjust icon size */
+    margin: 0 5px;                    /* Decrease margin between icons */
+  }
+
+  .vertical-hr {
+    height: 30px;                     /* Adjust separator height */
+    border-left: 1px solid #4f4e4e;
+  }
+
+  .main-content {
+    margin-top: 50px;                 /* Adjust for smaller navbar height */
+  }
+
+  .user-name {
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.4536082474226804rem + 1.2886597938144329vw, 2rem);          /* Adjust font size for smaller view */
+  }
+}
+
+
+
+

@@ -1,0 +1,299 @@
+/* General Footer Styling */
+.footer {
+  background-color: #d8e0e1; /* Updated background color */
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Footer Links */
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 3rem;
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem); /* Larger font size for better visibility */
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.footer-links ul li {
+  margin-bottom: 20px;
+}
+
+.footer-links ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Middle Section - Post Property */
+.footer-post {
+  text-align: left;
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  width: 30%; /* Adjust width as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the middle section */
+}
+
+.footer-post-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left-align text */
+}
+
+.footer-post-text p {
+  font-size: clamp(1rem, 0.8rem + 0.5vw, 1.2rem);
+  color: #333;
+  margin: 0; /* Remove additional margin for tighter layout */
+}
+
+.post-button {
+  background-color: #f35b00;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: clamp(0.5rem, 0.4rem + 1vw, 0.8rem) clamp(1rem, 0.8rem + 1vw, 1.2rem);
+  font-size: clamp(0.75rem, 0.7vw + 0.25rem, 1rem);
+  cursor: pointer;
+  margin-left: auto; /* Push button to the right side */
+  width: clamp(100px, 20vw, 150px); /* Control button width */
+  display: block;
+}
+
+/* Social and Download Section */
+.footer-connect-download {
+  text-align: left;
+  padding-right: 4rem;
+}
+
+.footer-social,
+.footer-download {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-social h3,
+.footer-download h3 {
+  font-size: clamp(1rem, 0.8vw + 0.5rem, 1.5rem);
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons img {
+  width: clamp(30px, 3vw, 50px);
+  cursor: pointer;
+}
+
+.app-links {
+  display: flex;
+  gap: 10px;
+}
+
+.app-badge-google {
+  width: clamp(100px, 20vw, 150px);
+  cursor: pointer;
+}
+
+.app-badge-apple {
+  width: clamp(80px, 18vw, 120px);
+  cursor: pointer;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  border-top: 1px solid #aaa;
+  margin-top: 20px;
+}
+
+.footer-bottom img {
+  height: 50px;
+  width: 100px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 1rem);
+  color: #333;
+}
+
+.footer-legal a {
+  color: #333;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 1rem);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.vertical-line {
+  height: 80%; /* Adjust the height as needed */
+  width: 1px; /* Width of the vertical line */
+  background-color: #aaa; /* Color of the line */
+  margin: 0 20px; /* Space around the line */
+}
+
+/* Media Query for Responsiveness */
+
+/* Responsive Styles for max-width 1024px */
+@media (max-width: 1024px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-post,
+  .footer-social,
+  .footer-download {
+    width: 70%; /* Middle section at 70% width */
+    margin: 0 auto; /* Center the elements */
+  }
+
+  .footer-links ul {
+    font-size: clamp(0.9rem, 0.6rem + 1vw, 1.3rem); /* Adjusted font size */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Responsive Styles for max-width 768px */
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .footer-section {
+    flex-direction: column; /* Stack sections vertically */
+    padding: 0; /* Remove side padding */
+    align-items: center; /* Center align items */
+  }
+
+  .footer-links ul {
+    font-size: clamp(0.8rem, 0.4rem + 1vw, 1.5rem); /* Larger font size for visibility */
+  }
+
+  .footer-post {
+    width: 70%; /* Centered width */
+    padding: 1%; /* Less padding */
+    margin: 0 auto; /* Center the footer post */
+  }
+
+  .footer-post-text {
+    align-items: flex-start; /* Align text to the left */
+  }
+
+  .footer-post p {
+    font-size: clamp(0.8rem, 0.5rem + 1vw, 1.2rem); /* Smaller font size */
+  }
+
+  .post-button {
+    width: 100%; /* Full width button */
+    padding: 0.5rem; /* Adjust padding for smaller button */
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center the button text */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .footer-bottom img {
+    height: 40px; /* Smaller logo size */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  .footer-bottom p {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center text */
+  }
+
+  .footer-legal {
+    text-align: center; /* Center legal links */
+  }
+
+  .footer-social {
+    margin-bottom: 20px; /* Add space below social icons */
+  }
+
+  .footer-download {
+    margin-bottom: 20px; /* Add space below app download section */
+  }
+}
+
+/* Responsive Styles for max-width 414px */
+@media (max-width: 414px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-section {
+    padding: 0; /* Remove padding */
+  }
+
+  .footer-links ul {
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem); /* Larger font size */
+  }
+
+  .footer-post {
+    width: 70%; /* Centered width */
+    padding: 10px; /* Less padding */
+    box-shadow: none; /* Remove box shadow for mobile */
+    margin: 0 auto; /* Center the footer post */
+  }
+
+  .post-button {
+    width: 100%; /* Full width button */
+    height: 70%; /* Maintain height proportion */
+    padding: clamp(0.6rem, 0.5rem + 1vw, 1rem);
+  }
+
+  .social-icons img,
+  .app-badge-google,
+  .app-badge-apple {
+    width: clamp(25px, 5vw, 40px); /* Adjusted icon size */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center; /* Center align */
+  }
+
+  .footer-legal {
+    margin-top: 10px; /* Space below legal links */
+    text-align: center; /* Center align legal links */
+  }
+}
+

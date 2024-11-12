@@ -1,0 +1,212 @@
+/* Main Promo Section */
+.promo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Promo container styling */
+.promo-container {
+  background-color: #d9d9d9;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  max-height: 50vh; /* Responsive max height */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.promo-content {
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 2% 5%;
+  width: 90%;
+}
+
+.promo-content h1 {
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem); /* Scalable font size */
+  font-weight: 550;
+  margin: 2% 0;
+}
+
+.promo-content p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem); /* Scalable font size */
+  margin: 1% 0 5%;
+}
+
+/* Promo button styling */
+.promo-button {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  background-color: #f85300;
+  width: 15rem; /* Maintain sleek width */
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  z-index: 10;
+  justify-content: center;
+  box-shadow: 0px 10px 10px rgba(153, 153, 152, 0.5);
+}
+
+.promo-button h1, .promo-button p {
+  color: white;
+  font-size: clamp(1rem, 1.2vw, 1.5rem); /* Scalable font size */
+  font-weight: 550;
+  margin: 0.5rem 0;
+}
+
+.promo-image {
+  position: absolute;
+  bottom: 10px; /* Always stay near the bottom */
+  right: 5%; /* Always stay near the right */
+  transform: translateY(0%);
+  width: clamp(10%, 20vw, 40%); /* Responsive size without skewing */
+  height: auto; /* Preserve aspect ratio */
+}
+
+/* Download section styling */
+.download-section {
+  
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+  /* padding: 1rem; */
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.download-image {
+  width: clamp(20%, 30vw, 35%); /* Responsive size */
+  height: auto;
+}
+
+.download-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  margin-left: 5%;
+}
+
+.download-content h1 {
+  color: #43b5aa;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* Scalable font size */
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.subheading, .download-content p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem); /* Scalable font size */
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+
+.app-badges {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* App badges */
+.google-play-badge{
+  width: clamp(100px, 20vw, 160px); /* Responsive size */
+}
+.app-store-badge {
+  width: clamp(80px, 13vw, 120px); /* Responsive size */
+}
+
+/* Responsive Styles */
+
+/* For tablets (width <= 1024px) */
+@media (max-width: 1024px) {
+  .promo-content {
+    margin: 0 3%;
+  }
+
+  .promo-button {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Slightly reduced width for smaller screens */
+  }
+
+  .download-content {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* For mobile devices (width <= 414px) */
+@media (max-width: 414px) {
+  .promo-container {
+    max-height: 70vh; /* Adjusted height for smaller screens */
+    padding: 2% 5%;
+  }
+
+  .promo-content {
+    text-align: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .promo-button {
+    width: 160px; /* Adjust button width for mobile */
+    padding: 0.5rem 1rem; /* Slightly smaller padding */
+    left: 50%;
+    top: auto;
+    bottom: 15%; /* Adjusted position for better visibility */
+    transform: translateX(-50%);
+  }
+
+  .promo-image {
+    width: 60%; /* Smaller image width */
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .download-section {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .download-content {
+    width: 90%; /* Full width */
+    text-align: center;
+    align-items: center;
+  }
+
+  .download-image {
+    width: 80%; /* Full width for smaller screens */
+  }
+}
+
+/* For very small devices (width <= 375px) */
+@media (max-width: 375px) {
+  .promo-container, .promo-content, .download-content {
+    width: 100%;
+  }
+
+  .promo-button {
+    bottom: 10%;
+    width: 130px;
+  }
+
+  .promo-image {
+    width: 30%; /* Adjusted for very small screens */
+    right: 5%;
+    bottom: 10%;
+  }
+}
+
+
